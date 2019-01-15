@@ -1,0 +1,14 @@
+{
+  "name": "fylo",
+  "version": "1.0.0",
+  "description": "Landing page for fylo",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Aisha Oyegunle",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

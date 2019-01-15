@@ -1,0 +1,119 @@
+//  (intro and email sign up background)
+$color-primary-blue: hsl(217, 28%, 15%); 
+// (main background)
+$color-primary-blue : hsl(218, 28%, 13%);
+// (footer background)
+$color-primary-blue : hsl(216, 53%, 9%);
+// (testimonials background)
+$color-primary-blue: hsl(219, 30%, 18%);
+
+
+// (inside call-to-action gradient)
+$color-cyan : hsl(176, 68%, 64%);
+// (inside call-to-action gradient)
+$color-blue : hsl(198, 60%, 50%);
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%; 
+}
+ 
+body{
+    box-sizing: border-box;
+    color: hsl(0, 0%, 100%);
+}
+
+.header{
+    background-color: hsl(217, 28%, 15%);
+    position: relative;
+    height: 70vh;
+    z-index: 1;
+
+    &::after {
+        content: "";  
+        position: absolute;
+        top: 15rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/bg-curvy-desktop.svg');
+        background-size: cover;
+        display: flex;
+        z-index: -1;
+    }
+
+    & .top_header{
+        height: 12vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-logobox {
+            padding: 1rem;
+        }
+
+        &-logo {
+            height: 3.5rem;
+        }
+
+        &-nav{
+            display: flex;
+            list-style: none;
+            font-size: 1.4rem;
+    
+            & li{
+                padding: 2rem;
+                margin-left: auto;
+            }
+    
+            & a {
+                text-decoration: none;
+                color: hsl(0, 0%, 100%);
+            }
+        }
+    }
+    .heading {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+
+        &_cover {
+            width: 30%;
+            align-self: center;
+        }
+        &_textbox{
+            align-self: center;
+            position: absolute;
+            // top: 80%;
+            width: 40rem;
+            // left: 30%;
+            text-align: center;
+            // display: none;
+        }
+    }
+}
+
+main{
+    background-color: hsl(218, 28%, 13%);
+}
+
+footer{
+    background-color: hsl(216, 53%, 9%);
+}
+.attribution{ 
+    font-size: 11px;
+    text-align: center;
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
+}

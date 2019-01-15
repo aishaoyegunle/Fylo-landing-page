@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  color: white; }
+
+.header {
+  background-color: #1c2431;
+  position: relative;
+  height: 70vh;
+  z-index: 1; }
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 15rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg-curvy-desktop.svg");
+    background-size: cover;
+    display: flex;
+    z-index: -1; }
+  .header .top_header {
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .header .top_header-logobox {
+      padding: 1rem; }
+    .header .top_header-logo {
+      height: 3.5rem; }
+    .header .top_header-nav {
+      display: flex;
+      list-style: none;
+      font-size: 1.4rem; }
+      .header .top_header-nav li {
+        padding: 2rem;
+        margin-left: auto; }
+      .header .top_header-nav a {
+        text-decoration: none;
+        color: white; }
+  .header .heading {
+    display: flex;
+    flex-direction: column; }
+    .header .heading_cover {
+      width: 30%;
+      align-self: center; }
+    .header .heading_textbox {
+      align-self: center;
+      position: absolute;
+      width: 40rem;
+      text-align: center; }
+
+main {
+  background-color: #181f2a; }
+
+footer {
+  background-color: #0b1523; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+  .attribution a {
+    color: #3e52a3; }
