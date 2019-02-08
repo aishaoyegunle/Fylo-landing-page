@@ -7,12 +7,21 @@ $color-primary-blue : hsl(216, 53%, 9%);
 // (testimonials background)
 $color-primary-blue: hsl(219, 30%, 18%);
 
-
 // (inside call-to-action gradient)
 $color-cyan : hsl(176, 68%, 64%);
 // (inside call-to-action gradient)
 $color-blue : hsl(198, 60%, 50%);
 
+@keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(5rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    } 
+}
 
 *,
 *::after,
@@ -30,6 +39,8 @@ html{
 body{
     box-sizing: border-box;
     color: hsl(0, 0%, 100%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
 }
 
 .header{
@@ -38,74 +49,240 @@ body{
     height: 70vh;
     z-index: 1;
 
-    &::after {
-        content: "";  
-        position: absolute;
-        top: 15rem;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('../images/bg-curvy-desktop.svg');
-        background-size: cover;
-        display: flex;
-        z-index: -1;
-    }
+    // &::after {
+    //     content: "";  
+    //     position: absolute;
+    //     top: 15rem;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url('../images/bg-curvy-desktop.svg');
+    //     background-size: cover;
+    //     display: flex;
+    //     z-index: -1;
+    // }
 
-    & .top_header{
-        height: 12vh;
+    .top_header{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        margin: 0 5rem;
+
+        @media screen and (max-width:600px) {
+            margin: 0 0;
+        }
 
         &-logobox {
-            padding: 1rem;
+            padding: 2rem;
         }
 
         &-logo {
             height: 3.5rem;
+            @media screen and (max-width:400px) {
+                height: 2rem;
+            }
         }
 
         &-nav{
             display: flex;
             list-style: none;
-            font-size: 1.4rem;
-    
+            font-size: 1.4rem;    
             & li{
                 padding: 2rem;
                 margin-left: auto;
+
+                @media screen and (max-width:500px) {
+                    padding: 2rem 1rem;
+                }
             }
     
             & a {
                 text-decoration: none;
                 color: hsl(0, 0%, 100%);
+                font-size: 1.6rem;
+                &:hover{
+                    padding-bottom: 1.5rem;
+                    border-bottom: .3rem $color-cyan solid;
+                }
             }
         }
     }
     .heading {
         display: flex;
+        // height: 70vh;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        // align-items: center;
-        // justify-content: center;
 
         &_cover {
-            width: 30%;
-            align-self: center;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+
+            >img{
+                // flex: 0 0 30rem;
+                // width: 100%;
+                // margin: 10rem;
+                // padding: 30rem;
+            }
         }
         &_textbox{
-            align-self: center;
-            position: absolute;
-            // top: 80%;
-            width: 40rem;
-            // left: 30%;
+            width: 50rem;
             text-align: center;
-            // display: none;
+
+            @media screen and (max-width:650px) {
+                width: 40rem;
+                padding: 0 5rem;
+            }
+
+            >h1{
+                font-family: 'Raleway', sans-serif;
+                font-weight: 700;
+                line-height: 1.5;
+                margin-bottom: 2.5rem;
+            }
+            >p{
+                line-height: 1.5;
+                text-align: center;
+                padding: 1rem 1rem;
+                margin-bottom: 3rem;
+                font-size: 1.6rem;
+            }
         }
     }
 }
 
-main{
-    background-color: hsl(218, 28%, 13%);
+.btn{
+    &:link, 
+    &:visited {
+        text-decoration: none;
+        border-radius: 10rem;
+        transition: all .2s;
+    }
+      
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
+    }
+    
+    &--blue {
+        background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+        color: #fff; 
+        padding: 1.3rem 6rem;
+    }
+    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
 }
+
+
+
+.Content{
+    background-color: hsl(218, 28%, 13%);
+
+    .Features{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(35rem, 1fr));
+        grid-gap: 2rem;
+        padding: 0 13vw;
+
+        @media screen and (max-width:1200px) and (min-width:650px) {
+            padding: 0 0rem;
+        }
+
+        @media screen and (max-width:650px) {
+            padding: 0 0;
+            grid-template-columns: repeat(1, minmax(35rem, 1fr));
+        }
+
+        &_grid{
+            padding: 5rem 10rem;
+            margin: 2rem;
+            text-align: center;
+            @media screen and (max-width:600px) {
+                padding: 0 3rem;
+            }
+        }
+
+        &_textbox{
+            margin-top: 2rem;
+
+            >h2{
+                margin-bottom: 2rem;
+            }
+            
+        }
+
+    }
+
+    .productive{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &_img{
+            >img{
+                width: 60%;
+            }
+        }
+
+        &_textbox{
+            align-self: center;
+            width: 25rem;
+        }
+    }
+
+    .team{
+        display: flex;
+        justify-content: center;
+        height: 20rem;
+        padding: 4rem;;
+
+        &_card{
+            background-color: hsl(219, 30%, 18%);
+            margin: 2rem;
+            border-radius: .5rem;
+            justify-self: center;
+            padding: 1rem;
+            // box-shadow:;
+            
+        }
+    }
+
+    .signup{
+        display: flex;
+        // width: 50rem;
+        justify-content: center;
+        align-content: center;
+
+        &_textbox{
+            width: 70rem;
+            background-color: hsl(217, 28%, 15%);
+            border-radius: .5rem;
+            padding: 2rem;
+
+        }
+    }
+}
+
+.footer_top{
+    background-color: hsl(216, 53%, 9%);
+    display: flex;
+    justify-content: space-around;
+    
+}
+
 
 footer{
     background-color: hsl(216, 53%, 9%);

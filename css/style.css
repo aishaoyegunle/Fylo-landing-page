@@ -1,3 +1,11 @@
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -10,33 +18,32 @@ html {
 
 body {
   box-sizing: border-box;
-  color: white; }
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem; }
 
 .header {
   background-color: #1c2431;
   position: relative;
   height: 70vh;
   z-index: 1; }
-  .header::after {
-    content: "";
-    position: absolute;
-    top: 15rem;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/bg-curvy-desktop.svg");
-    background-size: cover;
-    display: flex;
-    z-index: -1; }
   .header .top_header {
-    height: 12vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    margin: 0 5rem; }
+    @media screen and (max-width: 600px) {
+      .header .top_header {
+        margin: 0 0; } }
     .header .top_header-logobox {
-      padding: 1rem; }
+      padding: 2rem; }
     .header .top_header-logo {
       height: 3.5rem; }
+      @media screen and (max-width: 400px) {
+        .header .top_header-logo {
+          height: 2rem; } }
     .header .top_header-nav {
       display: flex;
       list-style: none;
@@ -44,23 +51,127 @@ body {
       .header .top_header-nav li {
         padding: 2rem;
         margin-left: auto; }
+        @media screen and (max-width: 500px) {
+          .header .top_header-nav li {
+            padding: 2rem 1rem; } }
       .header .top_header-nav a {
         text-decoration: none;
-        color: white; }
+        color: white;
+        font-size: 1.6rem; }
+        .header .top_header-nav a:hover {
+          padding-bottom: 1.5rem;
+          border-bottom: 0.3rem #65e2d9 solid; }
   .header .heading {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column; }
     .header .heading_cover {
-      width: 30%;
-      align-self: center; }
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem; }
     .header .heading_textbox {
-      align-self: center;
-      position: absolute;
-      width: 40rem;
+      width: 50rem;
       text-align: center; }
+      @media screen and (max-width: 650px) {
+        .header .heading_textbox {
+          width: 40rem;
+          padding: 0 5rem; } }
+      .header .heading_textbox > h1 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-bottom: 2.5rem; }
+      .header .heading_textbox > p {
+        line-height: 1.5;
+        text-align: center;
+        padding: 1rem 1rem;
+        margin-bottom: 3rem;
+        font-size: 1.6rem; }
 
-main {
+.btn:link, .btn:visited {
+  text-decoration: none;
+  border-radius: 10rem;
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--blue {
+  background: linear-gradient(to right, #65e2d9, #339ecc);
+  color: #fff;
+  padding: 1.3rem 6rem; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+.Content {
   background-color: #181f2a; }
+  .Content .Features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(35rem, 1fr));
+    grid-gap: 2rem;
+    padding: 0 13vw; }
+    @media screen and (max-width: 1200px) and (min-width: 650px) {
+      .Content .Features {
+        padding: 0 0rem; } }
+    @media screen and (max-width: 650px) {
+      .Content .Features {
+        padding: 0 0;
+        grid-template-columns: repeat(1, minmax(35rem, 1fr)); } }
+    .Content .Features_grid {
+      padding: 5rem 10rem;
+      margin: 2rem;
+      text-align: center; }
+      @media screen and (max-width: 600px) {
+        .Content .Features_grid {
+          padding: 0 3rem; } }
+    .Content .Features_textbox {
+      margin-top: 2rem; }
+      .Content .Features_textbox > h2 {
+        margin-bottom: 2rem; }
+  .Content .productive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .Content .productive_img > img {
+      width: 60%; }
+    .Content .productive_textbox {
+      align-self: center;
+      width: 25rem; }
+  .Content .team {
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+    padding: 4rem; }
+    .Content .team_card {
+      background-color: #202a3c;
+      margin: 2rem;
+      border-radius: .5rem;
+      justify-self: center;
+      padding: 1rem; }
+  .Content .signup {
+    display: flex;
+    justify-content: center;
+    align-content: center; }
+    .Content .signup_textbox {
+      width: 70rem;
+      background-color: #1c2431;
+      border-radius: .5rem;
+      padding: 2rem; }
+
+.footer_top {
+  background-color: #0b1523;
+  display: flex;
+  justify-content: space-around; }
 
 footer {
   background-color: #0b1523; }

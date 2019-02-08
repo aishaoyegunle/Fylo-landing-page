@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 </head>
@@ -24,13 +26,15 @@
 
     <!-- Header -->
     <div class="heading">
-      <img class="heading_cover" src="images/illustration-intro.png">
+      <div class="heading_cover">
+        <!-- <img src="images/illustration-intro.png"> -->
+      </div>
       <div class="heading_textbox">
         <h1 class="heading_textbox-main">All your files in one secure location, accessible anywhere.</h1>
         <p class="heading_textbox-sub">
           Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
         </p>
-        <a href="" class="btn btn--white btn--animated">Get Started</a>
+        <a href="" class="btn btn--blue btn--animated">Get Started</a>
       </div>
     </div>
   </header>
@@ -43,7 +47,7 @@
         <img src="/images/icon-access-anywhere.svg" alt="logo">
         <!-- svg img -->
         <div class="Features_textbox">
-          <h3 class="Features_textbox-main">Access your files, anywhere</h3>
+          <h2 class="Features_textbox-main">Access your files, anywhere</h2>
           <p class="Features_textbox-sub">
             The ability to use a smartphone, tablet, or computer to access your account means your 
             files follow you everywhere.
@@ -51,9 +55,10 @@
         </div>
       </div>
       <div class="Features_grid">
+        <img src="/images/icon-security.svg" alt="logo">
         <!-- svg img -->
         <div class="Features_textbox">
-          <h3 class="Features_textbox-main">Security you can trust</h3>
+          <h2 class="Features_textbox-main">Security you can trust</h2>
           <p class="Features_textbox-sub">
             2-factor authentication and user-controlled encryption are just a couple of the security 
             features we allow to help secure your files.
@@ -61,9 +66,10 @@
         </div>
       </div> 
       <div class="Features_grid">
+        <img src="/images/icon-collaboration.svg" alt="logo">
         <!-- svg img -->
         <div class="Features_textbox">
-          <h3 class="Features_textbox-main">Real-time collaboration</h3>
+          <h2 class="Features_textbox-main">Real-time collaboration</h2>
           <p class="Features_textbox-sub">
             Securely share files and folders with friends, family and colleagues for live collaboration. 
             No email attachments required.
@@ -71,9 +77,10 @@
         </div>
       </div>
       <div class="Features_grid">
+        <img src="/images/icon-any-file.svg" alt="logo">
         <!-- svg img -->
         <div class="Features_textbox">
-          <h3 class="Features_textbox-main">Store any type of file</h3>
+          <h2 class="Features_textbox-main">Store any type of file</h2>
           <p class="Features_textbox-sub">
             Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
             file types to be securely stored and shared.
@@ -85,10 +92,10 @@
     <!-- Productive -->
     <div class="productive">
       <div class="productive_img">
-        <img class="side" src="">
+        <img class="side" src="images/illustration-stay-productive.png">
       </div>
       <div class="productive_textbox">
-        <h1 class="heading_textbox-main">Stay productive, wherever you are</h1>
+        <h1 class="heading_textbox-main">Stay productive, <br>wherever you are</h1>
         <p class="productive_textbox-sub">
           Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
           storage needs.
@@ -158,7 +165,7 @@
   <!-- Footer -->
   <div class="footer_top">
     <div class="footer_top-grid logo">
-      <img src="" alt="" class="">
+      <img src="images/logo.svg" alt="logo" class="">
       <p class="footer_top-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
         dolore magna aliqua
@@ -186,9 +193,9 @@
       </ul>
     </div>
     <div class="footer_top-grid">
-      <span class="footer_top-connect"></span>
-      <span class="footer_top-connect"></span>
-      <span class="footer_top-connect"></span>
+      <span class="footer_top-connect"><i class="fab fa-facebook-f"></i></span>
+      <span class="footer_top-connect"><i class="fab fa-twitter"></i></span>
+      <span class="footer_top-connect"><i class="fab fa-instagram"></i></span>
     </div>
   </div>
 
