@@ -56,8 +56,7 @@ body {
             padding: 2rem 1rem; } }
       .header .top_header-nav a {
         text-decoration: none;
-        color: white;
-        font-size: 1.6rem; }
+        color: white; }
         .header .top_header-nav a:hover {
           padding-bottom: 1.5rem;
           border-bottom: 0.3rem #65e2d9 solid; }
